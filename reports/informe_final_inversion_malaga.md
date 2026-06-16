@@ -75,12 +75,14 @@ El análisis general del dataset limpio muestra los siguientes valores principal
 | Distritos analizados                |      11 |
 | Precio medio por noche              |   135 € |
 | Precio mediano por noche            |   106 € |
-| Ocupación media estimada            |  21,5 % |
 | Ingresos medios anuales estimados   | 9.143 € |
 | Ingresos medios mensuales estimados |   762 € |
 | Reviews último año                  | 101.142 |
+| Oferta concentrada en Centro        |  69,2 % |
 
 Estos indicadores ofrecen una primera visión del mercado, pero no son suficientes por sí solos para tomar decisiones. Por ese motivo, el dashboard se estructura en varias páginas que permiten profundizar en ingresos, competencia, actividad y tipo de producto.
+
+La ocupación media estimada no se utiliza como indicador principal de portada porque necesita contexto. En el dashboard se analiza más adelante por distrito, dentro de la página de actividad y competencia, donde aporta más valor comparativo.
 
 ---
 
@@ -88,15 +90,22 @@ Estos indicadores ofrecen una primera visión del mercado, pero no son suficient
 
 ### 5.1. Ingresos por distrito
 
-El distrito Centro concentra la mayor parte del ingreso estimado total. Esto se explica principalmente porque también concentra gran parte de la oferta visible en Airbnb.
+La página de ingresos por distrito permite comparar dos perspectivas diferentes: el ingreso estimado total y el ingreso medio anual por alojamiento.
 
-Sin embargo, al analizar el ingreso medio por alojamiento, aparecen otros distritos con señales interesantes. Esto demuestra que no basta con analizar el volumen total de ingresos, ya que un distrito con muchos alojamientos puede acumular más ingresos simplemente por tamaño de mercado.
+El distrito **Centro** concentra la mayor parte del ingreso estimado total. Esto se explica principalmente porque también reúne gran parte de la oferta visible en Airbnb. Es decir, Centro mueve más volumen económico porque concentra muchos alojamientos turísticos.
 
-Por tanto, la comparación entre ingreso total e ingreso medio permite diferenciar entre:
+Sin embargo, al analizar el **ingreso medio anual por alojamiento**, aparecen distritos con menor volumen de oferta pero con medias más altas, como **Palma-Palmilla** y **Puerto de la Torre**. Esto muestra que no conviene confundir tamaño de mercado con rendimiento medio por vivienda.
+
+También se observa que distritos como **Este** pueden tener un peso relevante en la distribución total de ingresos por contar con un número importante de alojamientos, pero no necesariamente presentan las mejores medias por alojamiento.
+
+Por tanto, esta página aporta una lectura clave para la toma de decisiones: **Centro es la zona más fuerte por volumen total y robustez de mercado, pero algunos distritos con menor oferta muestran señales interesantes en ingreso medio y merecen ser analizados en una segunda fase**.
+
+Esta comparación permite diferenciar entre:
 
 * Distritos con gran volumen de mercado.
-* Distritos con mejor rendimiento medio por alojamiento.
-* Zonas que pueden requerir un análisis posterior más detallado.
+* Distritos con mayor ingreso medio por alojamiento.
+* Zonas consolidadas con mucha oferta.
+* Zonas pequeñas con posibles señales atractivas, pero que requieren validación adicional.
 
 ---
 
@@ -116,15 +125,17 @@ Esta comparación permite separar dos conceptos importantes:
 * **Oferta o competencia:** cuántos alojamientos existen en una zona.
 * **Actividad estimada:** qué nivel de ocupación presentan los alojamientos.
 
+La ocupación estimada debe interpretarse como una señal comparativa entre distritos, no como una ocupación real confirmada del mercado completo.
+
 ---
 
 ### 5.3. Segmentación del producto
 
 La segmentación por tipo de dormitorio permite analizar qué tipo de vivienda presenta mejores señales económicas.
 
-Los alojamientos de 3 o más dormitorios muestran mayores ingresos medios anuales. Esto es esperable, ya que suelen tener mayor capacidad, precios más altos y posibilidad de alojar a más personas.
+Los alojamientos de **3 o más dormitorios** muestran mayores ingresos medios anuales. Esto es esperable, ya que suelen tener mayor capacidad, precios más altos y posibilidad de alojar a más personas.
 
-Sin embargo, al normalizar los ingresos por capacidad, los alojamientos de 1 dormitorio muestran mayor eficiencia por plaza y mayor ocupación media estimada.
+Sin embargo, al normalizar los ingresos por capacidad, los alojamientos de **1 dormitorio** muestran mayor eficiencia por plaza y mayor ocupación media estimada.
 
 Esta diferencia es importante porque evita una conclusión simplista. No se puede afirmar que los alojamientos grandes sean siempre mejores únicamente porque generan más ingresos absolutos. Para interpretar correctamente la oportunidad, es necesario cruzar:
 
@@ -133,6 +144,8 @@ Esta diferencia es importante porque evita una conclusión simplista. No se pued
 * Ocupación media estimada.
 * Precio noche.
 * Volumen de alojamientos.
+
+Los alojamientos de **2 dormitorios** aparecen como una opción intermedia interesante, ya que combinan mayor ingreso anual que los de 1 dormitorio con una ocupación estimada todavía alta y una capacidad más flexible.
 
 ---
 
@@ -183,13 +196,15 @@ Por último, el dashboard no sustituye un estudio financiero, legal o urbanísti
 
 A partir de las señales analizadas en el dashboard, no plantearía una única recomendación cerrada, sino una priorización en dos niveles: una opción principal más robusta y varias zonas exploratorias que merecen un análisis posterior.
 
-Como opción principal, priorizaría una vivienda turística de **1 o 2 dormitorios en el distrito Centro**. Centro concentra la mayor parte de la oferta visible, del ingreso estimado total y de la actividad turística. Aunque esto implica una competencia elevada, también indica una zona con demanda contrastada y mayor volumen de datos, por lo que las señales son más estables que en distritos con pocos alojamientos.
+Como opción principal, priorizaría una vivienda turística de **1 o 2 dormitorios en el distrito Centro**.
+
+Centro concentra la mayor parte de la oferta visible, del ingreso estimado total y de la actividad turística. Aunque esto implica una competencia elevada, también indica una zona con demanda contrastada y mayor volumen de datos, por lo que las señales son más estables que en distritos con pocos alojamientos.
 
 En cuanto al tipo de vivienda, los alojamientos de **3 o más dormitorios** presentan mayores ingresos medios anuales, pero también menor ocupación estimada y menor eficiencia por plaza. Por ese motivo, no serían la primera opción si el objetivo es buscar equilibrio entre ingreso, actividad y eficiencia.
 
 Los alojamientos de **1 dormitorio** muestran la mayor eficiencia por plaza y la mayor ocupación media estimada, lo que los convierte en una opción interesante si se prioriza eficiencia y rotación. Los alojamientos de **2 dormitorios** ofrecen una posición intermedia: mayor ingreso anual que los de 1 dormitorio, buena ocupación estimada y una capacidad más flexible.
 
-Junto a esta opción principal, también revisaría como **zonas exploratorias** algunos distritos con menor volumen de alojamientos pero señales atractivas en ingresos medios u ocupación. En este grupo destacan especialmente **Palma-Palmilla**, **Puerto de la Torre** y **Ciudad Jardin**. Estos distritos muestran métricas interesantes, pero al tener una muestra más pequeña deben interpretarse con especial cautela.
+Como zonas exploratorias, revisaría especialmente **Palma-Palmilla** y **Puerto de la Torre**, porque destacan en ingreso medio anual por alojamiento pese a tener menor peso en el ingreso total. También consideraría **Ciudad Jardin** por sus señales de ocupación estimada. Estas zonas no se plantean como recomendación principal porque tienen menos alojamientos y, por tanto, sus métricas pueden ser menos estables, pero sí merecen una segunda fase de análisis antes de descartarlas.
 
 Por tanto, la priorización quedaría así:
 
@@ -208,16 +223,17 @@ Esta recomendación debe entenderse como una **priorización inicial basada en s
 
 El análisis muestra que Málaga ciudad presenta un mercado de vivienda turística con una fuerte concentración en el distrito Centro, tanto en volumen de oferta como en ingresos estimados totales. Esta concentración convierte a Centro en la zona más sólida para iniciar un estudio de inversión, ya que ofrece mayor volumen de datos, demanda turística contrastada y una actividad visible más estable.
 
-Sin embargo, el análisis también muestra que no conviene limitar la interpretación únicamente al volumen total. Algunos distritos con menor número de alojamientos presentan señales interesantes en ingresos medios u ocupación estimada. Este es el caso de zonas como Palma-Palmilla, Puerto de la Torre o Ciudad Jardin, que podrían representar oportunidades a estudiar en una segunda fase. La cautela aquí es importante: al tener menos alojamientos, sus métricas pueden estar más influidas por casos concretos y necesitan validación adicional.
+Sin embargo, el análisis también muestra que no conviene limitar la interpretación únicamente al volumen total. Algunos distritos con menor número de alojamientos presentan señales interesantes en ingresos medios u ocupación estimada.
 
-Respecto al tipo de vivienda, los alojamientos de 3 o más dormitorios generan más ingresos absolutos, pero los alojamientos de 1 dormitorio muestran mayor eficiencia por plaza y mayor ocupación estimada. Los alojamientos de 2 dormitorios representan una opción intermedia interesante, al combinar mayor ingreso anual que los de 1 dormitorio con una ocupación estimada todavía alta.
+Además de Centro, el análisis permite detectar zonas exploratorias con señales relevantes. **Palma-Palmilla** y **Puerto de la Torre** destacan por ingresos medios anuales por alojamiento, aunque su peso en el ingreso total sea menor debido al reducido número de viviendas analizadas. Por otro lado, **Ciudad Jardin** muestra señales positivas de ocupación estimada. Estas zonas no deben interpretarse como una recomendación directa de compra, pero sí como distritos que conviene estudiar en una segunda fase con más información sobre precios de adquisición, normativa, costes y rentabilidad neta.
+
+Respecto al tipo de vivienda, los alojamientos de **3 o más dormitorios** generan más ingresos absolutos, pero los alojamientos de **1 dormitorio** muestran mayor eficiencia por plaza y mayor ocupación estimada. Los alojamientos de **2 dormitorios** representan una opción intermedia interesante, al combinar mayor ingreso anual que los de 1 dormitorio con una ocupación estimada todavía alta.
 
 Por tanto, la recomendación inicial sería estudiar con mayor profundidad viviendas turísticas de **1 o 2 dormitorios en el distrito Centro** como opción principal. Además, se recomienda analizar de forma exploratoria distritos con menor volumen pero buenas señales, especialmente **Palma-Palmilla, Puerto de la Torre y Ciudad Jardin**, antes de descartar oportunidades fuera del centro.
 
 El dashboard desarrollado permite comparar distritos y tipos de vivienda de forma visual, clara y crítica. Su principal valor es facilitar una primera selección de zonas y productos que podrían estudiarse con mayor profundidad en una fase posterior.
 
 La conclusión final es que los resultados deben interpretarse como señales comparativas del mercado visible, no como una recomendación directa de compra ni como una estimación de rentabilidad neta.
-
 
 ---
 
@@ -234,4 +250,3 @@ La conclusión final es que los resultados deben interpretarse como señales com
 | `reports/informe_final_inversion_malaga.md`    | Informe final del proyecto               |
 
 ---
-
